@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import java.time.LocalDate;
+import java.time.Month;
 import java.util.List;
 
 import org.springframework.boot.SpringApplication;
@@ -21,8 +22,8 @@ public class DemoApplication {
 	@GetMapping("/")
 	public List<Student> hello() {
 		return List.of(
-			new Student(1L, "Amy", "amy@gmail.com", LocalDate.of(1990, 2, 13), 22), 
-			new Student(2L, "Bob", "bob@gmail.com", LocalDate.of(1990, 5, 22), 22)
+			new Student(1L, "Amy", "amy@gmail.com", LocalDate.of(1990, Month.FEBRUARY, 13), 22), 
+			new Student(2L, "Bob", "bob@gmail.com", LocalDate.of(1990, Month.JULY, 22), 22)
 			);
 	}
 }
