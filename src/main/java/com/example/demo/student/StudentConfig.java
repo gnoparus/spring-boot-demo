@@ -14,8 +14,8 @@ public class StudentConfig {
     @Bean
     CommandLineRunner commandLineRunner(StudentRepository repository) {
         return args -> {
-            Student amy= new Student("Amy", "amy11@gmail.com", LocalDate.of(1981, Month.JANUARY, 1), 11);
-            Student bobby = new Student("Bobby", "bobby22@gmail.com", LocalDate.of(1982, Month.FEBRUARY, 2), 12);
+            Student amy= new Student("Amy", "amy11@gmail.com", LocalDate.of(1981, Month.JANUARY, 1));
+            Student bobby = new Student("Bobby", "bobby22@gmail.com", LocalDate.of(1982, Month.FEBRUARY, 2));
 
             repository.saveAll(List.of(amy, bobby));
         };
